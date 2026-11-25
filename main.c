@@ -1,10 +1,31 @@
-// Maak hier nog codam header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   main.c                                             :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: lvan-win <lvan-win@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/11/25 15:13:14 by lvan-win      #+#    #+#                 */
+/*   Updated: 2026/11/25 15:13:14 by lvan-win      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "codexion.h"
 
-void *coder_routine(void *arg)
+void *coder_routine(void *coder, void * args)
 {
-    printf("Here comes the coder routine\n");
+    while (time < args.time_to_burnout)
+    {
+    	take_dongle(coder);
+    	take_dongle(coder);
+    	compile(coder, args);
+    }
+	if (time >= args.time_to_burnout)
+		// stop due to burnout
+	if (coder.times_compiled >= args.number_of_compiles_required)
+		// stop sim
+    debug(coder, args);
+	refactor(coder, args);
     return NULL;
 }
 
